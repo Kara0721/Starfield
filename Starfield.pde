@@ -24,12 +24,15 @@ class Particle{
    myX = 300;
    myY = 300;
    myColor = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
-   mySpeed = (Math.random()*11);
+   mySpeed = (Math.random()*8);
    myAngle = (Math.random()*2*Math.PI);
  }
  void move (){
    myX = myX + (Math.cos(myAngle)*mySpeed);
    myY = myY + (Math.sin(myAngle)*mySpeed);
+   if (myX > 700 || myY >700){
+    myX = myY = 0;
+   }
  }
  void show(){
    fill ((int)myColor);
@@ -45,8 +48,8 @@ class Oddball extends Particle{
    myAngle = (Math.random()*2*Math.PI);
   }
   void move(){
-    myX = myX + (int)(Math.random()*3)-1;
-    myY = myY + (int)(Math.random()*3)-1;
+    myX = mouseX;
+    myY = mouseY;
   }
   void show(){
     fill((int)myColor);
