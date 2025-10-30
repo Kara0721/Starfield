@@ -20,7 +20,7 @@ class Particle{
  public void move (){
    myX = myX + (Math.cos(myAngle)*mySpeed);
    myY = myY + (Math.sin(myAngle)*mySpeed);
-   if (myX <= 0 || myX >= 600 || myY <= 0 || myY >= 600){
+   if (myX <= -300 || myX >= 900 || myY <= -300 || myY >= 900){
     myX = myY = 300; 
    }
  }
