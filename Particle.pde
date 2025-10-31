@@ -26,6 +26,6 @@ class Particle{
  }
  public void show(){
    fill ((int)myColor);
-   ellipse ((int)myX, (int)myY, 10,10);
+      rect ((int)myX,(int)myY, 2,5);
  } 
 }//end of particle class
